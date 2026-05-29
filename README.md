@@ -3,7 +3,6 @@
 <p align="center">
   Becoming a Full-stack developer • Programming Lover 
 </p>
----
 
 ### 🌐 Portfolio
 
@@ -23,7 +22,7 @@
 ### Reach me
 
 <p align="center">
-  🌐 <a href="https://meu-portfolio-programa-duda.vercel.app/">Personal Portfolio</a> •
-  💼 <a href="https://www.linkedin.com/in/maria-eduarda-pereira-a6b005344/> LinkedIn </a> •
-  📧 <a href="mailto:dudapereira.dev@gmail.com.br">Email</a>
+  🌐 <a target="_blank" href="https://meu-portfolio-programa-duda.vercel.app/">Personal Portfolio</a> •
+  💼 <a target="_blank" href="https://www.linkedin.com/in/maria-eduarda-pereira-a6b005344/">LinkedIn</a> •
+  📧 <a href="mailto:dudapereira.dev@gmail.com">Email</a>
 </p>
