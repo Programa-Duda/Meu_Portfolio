@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Portfólio - Maria Eduarda</title>
+</head>
+
+<body>
+    
+    <!-- Desenvolvendo um menu universal / header para o site através do "nav" e uma lista não ordenada -->
+    <!-- INÍCIO HEADER -->
+    <nav class="nav">
+
+        <ul class="nav-list">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#sobre">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- Desenvolvendo o início do corpo do site -->
+    <!-- INÍCIO MAIN -->
+    <section id="home" class="main">
+
+        <div class="lado-esquerdo">
+            <h1> Hello World! 🌎 </h1>
+            <p class="p1"> Me chamo Maria Eduarda, </p>
+            <p class="p2"> e este é o meu portfólio. </p>
+            <a href="#projetos">
+                <button class="bt-projetos"> VER PROJETOS </button>
+            </a>
+            <a target="_blank" href="https://wa.me/5519991881910">
+                <button class="bt-fale-cmg"> FALE COMIGO </button>
+            </a>
+        </div>
+
+        <div class="lado-direito">
+           <!-- Espaço para futuras atualizações -->
+        </div>
+
+    </section>
+
+
+    <!-- Desenvolvendo do corpo do site -->
+    <!-- INÍCIO SOBRE -->
+     <section id="sobre" class="sobre">
+        <div>
+            <h2> SOBRE MIM </h2>
+            <p> Me chamo Maria Eduarda Pereira e sou formada em Desenvolvimento de Sistemas pela ETEC de Americana, atualmente estou construindo minha trajetória na área de tecnologia com foco em desenvolvimento web full-stack.</p><br>
+            <p>Acredito no poder da tecnologia para transformar ideias em soluções práticas e funcionais. Desta forma, busco oportunidades na área para evoluir profissionalmente, adquirir experiência e contribuir com dedicação e comprometimento.</p>
+        
+            <h3>IDIOMAS:</h3> 
+            <div class="idiomas">
+                <button class="skills"> INGLÊS </button>
+                <button class="skills"> PORTUGUÊS </button>
+                <button class="skills"> HOLANDÊS </button>
+            </div>
+
+            <h3>CONHECIMENTOS:</h3>
+            <button class="skills"> HTML </button>
+            <button class="skills"> CSS </button>
+            <button class="skills"> GIT </button>
+            <button class="skills"> GITHUB </button>
+            <button class="skills"> JS </button>
+        
+        </div>
+
+        <div class="sobre-direito">
+        <img src="imagens/foto perfil.png" alt="Foto perfil">
+        
+        <a target="_blank" href="https://docs.google.com/document/d/1NYRxw0soqIEBPhY3I_xQXbbyJ_Z7n7zQ/edit?usp=sharing&ouid=110325381796916016101&rtpof=true&sd=true">
+        <button class="bt-pdf"> CURRÍCULO EM PDF </button>
+        </a>
+
+        </div>
+
+     </section>
+
+
+    <!-- Desenvolvendo do corpo do site -->
+    <!-- INÍCIO PRINCIPAIS PROJETOS -->
+     <section id="projetos" class="projetos">
+        <h2> PRINCIPAIS PROJETOS </h2>
+
+        <div class="lista-projetos">
+
+            <div class="card">
+                <div class="img-card">
+                    <img id="img" src="imagens/projeto1.png" alt="Foto projeto 1">
+                </div>
+
+                <div class="card-text">
+                    <span class="title">Justifiq.</span>
+                    <span class="description">HTML - CSS</span>
+                </div>
+
+                <div class="media-buttons">
+                    <a href="#" class="git-link"><img src="imagens/github.png"></a>
+                    <a href="#" class="link"><img src="imagens/eye.png"></a>
+                </div>
+
+            </div>
+
+           
+        
+
+        <!-- Botão "ver mais" projetos -->
+        </div>
+        <a target="_blank" href="https://github.com/Programa-Duda">
+            <button class="bt-ver-mais"> VER MAIS </button>
+        </a>
+
+     </section>
+
+
+    <!-- Desenvolvendo do rodapé -->
+    <!-- INÍCIO RODAPÉ -->
+     <section id="contato">
+     <footer class="rodape">
+
+        <a href=""><img src="imagens/whats logo.png" alt="Logo WhatsApp"></a>
+        <a href=""><img src="imagens/github.png" alt="Logo Github"></a>
+        <a href=""><img src="imagens/linkedin logo.png" alt="Logo Linkedin"></a>
+        <a href=""><img src="imagens/instagram logo.png" alt="Logo Instagram"></a>
+
+     </footer>
+     </section>
+
+
+    <!--<script src="script.js">
+        var lastScrollTop = 0;
+        navbar = document.getElementsByClassName("nav");
+        window.addEventListener("scroll", function(){
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop){
+        navbar.style.top="-80px";
+        }else{
+        navbar.style.top="0px";       
+        }
+        lastScrollTop = scrollTop;
+        })
+    </script>
+    !-->
+
+</body>
+
+</html>

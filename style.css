@@ -1,0 +1,390 @@
+/* == INÍCIO DESING GERAL == */
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ====================== */
+
+
+
+/* ==== INÍCIO HEADER ==== */
+
+.nav{
+    background-color: #191e29;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+
+    /* Garantindo a preferência do menu em uma camada "superior" a qualquer outro elemento*/
+    z-index: 9; 
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 32px;
+}
+
+.nav-list a{
+    text-decoration: none;
+    color: #F5F5F5;
+    padding: 20px;
+}
+
+.nav-lis a:hover{
+    color: #F5F5F5
+}
+
+/* ====================== */
+
+
+
+/* ==== INÍCIO MAIN ==== */
+
+.main{
+    width: 100%;
+    background-color: #191e29;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lado-esquerdo{
+    padding-left: 10%;
+}
+
+.lado-direito{
+    padding-right: 10%;
+}
+
+.main h1{
+    color: #F5F5F5;
+    font-size: 50px;
+}
+
+.p1{
+    color: #F5F5F5;
+    font-size: 30px;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.p2{
+    color: #F5F5F5;
+    font-size: 26px;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.bt-projetos{
+    font-weight: bolder;
+    color: #F5F5F5;
+    cursor: pointer;
+    background-color: #191e29;
+    border-color: #FF5722;
+    padding: 14px 50px;
+    border-radius: 6px;
+    transition: 0.6s;
+}
+
+.bt-projetos:hover{
+    transform: scale(1.1);
+}
+
+.bt-fale-cmg{
+    font-weight: bolder;
+    color: #F5F5F5;
+    cursor: pointer;
+    background-color: #191e29;
+    border-color: #605B51;
+    padding: 14px 50px;
+    border-radius: 6px;
+    transition: 0.6s;
+}
+
+.bt-fale-cmg:hover{
+    transform: scale(1.1);
+}
+
+.main a{
+    margin-right: 12px;
+    text-decoration: none;
+}
+
+/* ====================== */
+
+
+
+/* ==== INÍCIO SOBRE ==== */
+.sobre{
+    background-color: #303841;
+    width: 100%;
+    height: 80vh;
+    padding-left: 10%;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre div{
+    max-width: 50%;
+    padding-right: 10%;
+    color: #FFFFFF;
+}
+
+.sobre img{
+    max-width: 450px;
+}
+
+.sobre h2{
+    padding-bottom: 40px;
+    font-size: 30px;
+}
+
+.sobre p{
+    text-align: justify;
+}
+
+.sobre h3{
+    padding-top: 60px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.skills{
+    color: #F5F5F5;
+    background-color: #191e29;
+    border-color: #605B51;
+    padding: 10px 20px;
+    margin-right: 5px;
+    border-radius: 6px;
+    opacity: 0.8;
+}
+
+.idiomas{
+    display: flex;
+    flex-direction:row;
+}
+
+/* === LADO DIREITO - SOBRE ===*/
+.sobre-direito{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.bt-pdf{
+    font-weight: bolder;
+    color: #F5F5F5;
+    cursor: pointer;
+    background-color: #191e29;
+    border-color: #F5F5F5;
+    margin-top: 30px;
+    padding: 14px 120px;
+    border-radius: 6px;
+    transition: 0.6s;
+    opacity: 0.4;
+}
+
+.bt-pdf:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* ====================== */
+
+
+
+/* ==== INÍCIO PRINCIPAIS PROJETOS ==== */
+
+.projetos{
+    width: 100%;
+    background-color: #191e29;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 5%;
+}
+
+.projetos h2{
+    color: #F5F5F5;
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.bt-ver-mais{
+    font-weight: bolder;
+    color: #F5F5F5;
+    cursor: pointer;
+    background-color: #191e29;
+    border-color: #F5F5F5;
+    padding: 14px 110px;
+    border-radius: 6px;
+    transition: 0.6s;
+    opacity: 0.5;
+    margin-top: 30px;
+}
+
+.bt-ver-mais:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+/* ==== LISTA DOS PROJETOS ====*/
+.lista-projetos{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projetos img{
+    border-radius: 24px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: 0.6s;
+}
+
+.projetos .img-card:hover{
+    cursor: pointer;
+}
+
+.img-card{
+    border-radius: 24px;
+    position: relative;
+    height: 250px;
+    width: 300px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    width:100%;
+    border-radius: 24px;
+    background-color: #303841;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+    transition: 0.6s;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card .card-text{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-text .title{
+    color: #F5F5F5;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.card-text .description{
+    color: #F5F5F5;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.media-buttons{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin: 30px auto 10px auto;
+    gap: 15px;
+}
+
+.media-buttons .link:hover{
+    cursor: pointer;
+    opacity: 1;
+    transform:  scale(1.1);
+}
+
+.media-buttons .git-link:hover{
+    cursor: pointer;
+    opacity: 1;
+    transform:  scale(1.1);
+}
+
+.media-buttons .link{
+    opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.media-buttons .git-link{
+    opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    transition: 0.6s;
+}
+/* ====================== */
+
+
+
+/* === INÍCIO RODAPÉ === */
+.rodape{
+    width: 100%;
+    background-color: #303841;
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape a{
+    width: 50px;
+    height: 50px;
+    transition: 0.6s;
+    margin-right: 30px;
+    opacity: 0.5;
+}
+
+.rodape a:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* ====================== */
