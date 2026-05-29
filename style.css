@@ -335,6 +335,11 @@ html{
     transform:  scale(1.1);
 }
 
+.media-buttons .link-slash:hover{
+    cursor: pointer;
+    transform:  scale(1.1);
+}
+
 .media-buttons .git-link:hover{
     cursor: pointer;
     opacity: 1;
@@ -347,6 +352,16 @@ html{
     justify-content: center;
     height: 50px;
     width: 50px;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.media-buttons .link-slash{
+    opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
     text-decoration: none;
     transition: 0.6s;
 }
