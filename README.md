@@ -6,7 +6,9 @@
 
 ### 🌐 Portfolio
 
-→ [Click here to see the site from this repository](https://meu-portfolio-programa-duda.vercel.app/)
+
+→ <a href="https://meu-portfolio-programa-duda.vercel.app/" target="_blank">[Click here to see the site from this repository]
+</a>
 
 ---
 
