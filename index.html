@@ -1,153 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="pt-br">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Maria Eduarda Pereira, desenvolvedora web em formação.">
+
+    <!-- Fontes utilizadas no site -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <title>Portfólio - Maria Eduarda</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Maria Eduarda | Portfólio</title>
 </head>
 
 <body>
-    
-    <!-- Desenvolvendo um menu universal / header para o site através do "nav" e uma lista não ordenada -->
+
     <!-- INÍCIO HEADER -->
-    <nav class="nav">
+    <header class="nav" id="topo">
+        <a class="brand" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/duda.code/">duda <span>.code</span></a>
 
-        <ul class="nav-list">
-            <li>
-                <a href="#home">Home</a>
-            </li>
-            <li>
-                <a href="#sobre">Sobre</a>
-            </li>
-            <li>
-                <a href="#projetos">Projetos</a>
-            </li>
-            <li>
-                <a href="#contato">Contato</a>
-            </li>
-        </ul>
-    </nav>
+        <!-- Botão exibido apenas em telas menores -->
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
+        <nav aria-label="Navegação principal">
+            <ul class="nav-list" id="nav-list">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Desenvolvendo o início do corpo do site -->
-    <!-- INÍCIO MAIN -->
-    <section id="home" class="main">
+    <main>
 
-        <div class="lado-esquerdo">
-            <h1> Hello World! 🌎 </h1>
-            <p class="p1"> Me chamo Maria Eduarda, </p>
-            <p class="p2"> e este é o meu portfólio. </p>
-            <a href="#projetos">
-                <button class="bt-projetos"> VER PROJETOS </button>
+        <!-- INÍCIO HOME -->
+        <section id="home" class="main" aria-labelledby="titulo-inicial">
+            <div class="hero-content reveal">
+                <p class="eyebrow"><span></span> Desenvolvedora web em formação</p>
+
+                <h1 id="titulo-inicial">
+                    Hello World.<br>
+                    <strong>Eu sou Maria Eduarda.</strong>
+                </h1>
+
+                <p class="hero-text">
+                    Transformo ideias em experiências digitais claras, funcionais e construídas com atenção aos detalhes.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projetos">
+                        Ver projetos <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a class="button button-secondary" target="_blank" rel="noopener noreferrer" href="https://wa.me/5519991881910">
+                        Fale comigo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Elemento decorativo do início -->
+            <div class="hero-art" aria-hidden="true">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="code-card">
+                    <span>&lt;code&gt;</span>
+                    <strong>criando caminhos no<br>universo digital</strong>
+                    <span>&lt;/code&gt;</span>
+                </div>
+            </div>
+
+            <a class="scroll-hint" href="#sobre">
+                role para explorar <span></span>
             </a>
-            <a target="_blank" href="https://wa.me/5519991881910">
-                <button class="bt-fale-cmg"> FALE COMIGO </button>
+        </section>
+
+        <!-- INÍCIO SOBRE -->
+        <section id="sobre" class="sobre section" aria-labelledby="titulo-sobre">
+            <div class="about-copy reveal">
+                <p class="section-label">01 — sobre mim</p>
+
+                <h2 id="titulo-sobre">Em constante evolução através da<br><em>tecnologia.</em></h2>
+
+                <p>
+                    Sou Maria Eduarda Pereira, formada em <b>Desenvolvimento de Sistemas</b> pela <b>ETEC</b> de Americana e 
+                    atualmente cursando <b>Análise e Desenvolvimento de Sistemas</b> na <b>FATEC</b> de Americana. Estou construindo
+                    minha trajetória em tecnologia com foco no desenvolvimento de aplicações back-end e front-end, 
+                    além de ferramentas de inteligência artificial aplicadas ao desenvolvimento.
+                </p>
+
+                <p>
+                    Acredito que boas soluções combinam utilidade, clareza e atenção aos detalhes. 
+                    Busco oportunidades para aprender na prática, colaborar com equipes e transformar ideias em 
+                    produtos digitais relevantes.
+                </p>
+
+                <a class="text-link" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1NYRxw0soqIEBPhY3I_xQXbbyJ_Z7n7zQ/edit?usp=sharing&ouid=110325381796916016101&rtpof=true&sd=true">
+                    Ver currículo <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+            <div class="about-side reveal">
+                <div class="photo-frame">
+                    <img src="imagens/foto perfil.png" alt="Maria Eduarda sorrindo">
+                </div>
+
+                <p class="availability"><span></span> Disponível para oportunidades</p>
+            </div>
+
+            <div class="skills-area reveal">
+                <div>
+                    <h3>Conhecimentos</h3>
+                    <ul class="skills-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Idiomas</h3>
+                    <ul class="skills-list">
+                        <li>Português</li>
+                        <li>Inglês</li>
+                        <li>Holandês</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- INÍCIO PROJETOS -->
+        <section id="projetos" class="projetos section" aria-labelledby="titulo-projetos">
+            <div class="section-heading reveal">
+                <div>
+                    <p class="section-label">02 — trabalhos selecionados</p>
+                    <h2 id="titulo-projetos">Projetos que ganham<br><em>vida no navegador.</em></h2>
+                </div>
+
+                <p>
+                    Uma seleção de interfaces construídas para aprender e resolver problemas.
+                </p>
+            </div>
+
+            <div class="lista-projetos">
+                <!-- Projeto publicado -->
+                <article class="card reveal">
+                    <a class="project-image" target="_blank" rel="noopener noreferrer" href="https://justifiq.vercel.app/">
+                        <img src="imagens/projeto1.png" alt="Prévia do projeto Justifiq">
+                        <span>Ver projeto ↗</span>
+                    </a>
+
+                    <div class="card-text">
+                        <p class="project-number">01</p>
+                        <h3>Justifiq.</h3>
+                        <p>Uma interface web criada com HTML e CSS.</p>
+                    </div>
+
+                    <div class="project-links">
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Programa-Duda/Justifiq.">
+                            Código <span>↗</span>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://justifiq.vercel.app/">
+                            Live <span>↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Espaços prontos para os próximos projetos -->
+                <article class="card reveal">
+                    <div class="project-image project-placeholder">
+                        <img src="imagens/projeto2.png" alt="Prévia de projeto em desenvolvimento">
+                        <span>Em breve</span>
+                    </div>
+
+                    <div class="card-text">
+                        <p class="project-number">02</p>
+                        <h3>Próximo projeto</h3>
+                        <p>Um novo experimento está sendo preparado.</p>
+                    </div>
+
+                    <div class="project-links muted">
+                        <span>Em desenvolvimento</span>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="project-image project-placeholder">
+                        <img src="imagens/projeto3.png" alt="Prévia de projeto em desenvolvimento">
+                        <span>Em breve</span>
+                    </div>
+
+                    <div class="card-text">
+                        <p class="project-number">03</p>
+                        <h3>Próximo projeto</h3>
+                        <p>Mais uma ideia pronta para sair do papel.</p>
+                    </div>
+
+                    <div class="project-links muted">
+                        <span>Em desenvolvimento</span>
+                    </div>
+                </article>
+            </div>
+
+            <a class="button button-secondary all-projects reveal" target="_blank" rel="noopener noreferrer" href="https://github.com/Programa-Duda">
+                Ver todos no GitHub <span aria-hidden="true">↗</span>
             </a>
-        </div>
+        </section>
+    </main>
 
-        <div class="lado-direito">
-           <!-- Espaço para futuras atualizações -->
-        </div>
-
-    </section>
-
-
-    <!-- Desenvolvendo do corpo do site -->
-    <!-- INÍCIO SOBRE -->
-     <section id="sobre" class="sobre">
+    <!-- INÍCIO RODAPÉ / CONTATO -->
+    <footer id="contato" class="rodape">
         <div>
-            <h2> SOBRE MIM </h2>
-            <p> Me chamo Maria Eduarda Pereira e sou formada em Desenvolvimento de Sistemas pela ETEC de Americana, atualmente estou construindo minha trajetória na área de tecnologia com foco em desenvolvimento web full-stack.</p><br>
-            <p>Acredito no poder da tecnologia para transformar ideias em soluções práticas e funcionais. Desta forma, busco oportunidades na área para evoluir profissionalmente, adquirir experiência e contribuir com dedicação e comprometimento.</p>
-        
-            <h3>IDIOMAS:</h3> 
-            <div class="idiomas">
-                <button class="skills" disabled> INGLÊS </button>
-                <button class="skills" disabled> PORTUGUÊS </button>
-                <button class="skills" disabled> HOLANDÊS </button>
+            <p class="section-label">03 — contato</p>
+            <h2>O que acha de <br>criarmos algo<br><em>incrível juntos?</em></h2>
+
+            <a class="email-link" href="mailto:dudapereira.dev@gmail.com">
+                dudapereira.dev@gmail.com <span>↗</span>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Maria Eduarda Pereira</p>
+
+            <div class="social-links">
+                <a target="_blank" rel="noopener noreferrer" href="https://wa.me/5519991881910">WhatsApp</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Programa-Duda">GitHub</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/maria-eduarda-pereira-a6b005344/">LinkedIn</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/duda.code/">Instagram</a>
             </div>
-
-            <h3>CONHECIMENTOS:</h3>
-            <button class="skills" disabled> HTML </button>
-            <button class="skills" disabled> CSS </button>
-            <button class="skills" disabled> GIT </button>
-            <button class="skills" disabled> GITHUB </button>
-            <button class="skills" disabled> JS </button>
-        
         </div>
+    </footer>
 
-        <div class="sobre-direito">
-        <img src="imagens/foto perfil.png" alt="Foto perfil">
-        
-        <a target="_blank" href="https://docs.google.com/document/d/1NYRxw0soqIEBPhY3I_xQXbbyJ_Z7n7zQ/edit?usp=sharing&ouid=110325381796916016101&rtpof=true&sd=true">
-        <button class="bt-pdf"> CURRÍCULO EM PDF </button>
-        </a>
-
-        </div>
-
-     </section>
-
-
-    <!-- Desenvolvendo do corpo do site -->
-    <!-- INÍCIO PRINCIPAIS PROJETOS -->
-     <section id="projetos" class="projetos">
-        <h2> PRINCIPAIS PROJETOS </h2>
-
-        <div class="lista-projetos">
-
-            <div class="card">
-                <div class="img-card">
-                    <a target="_blank" href="https://justifiq.vercel.app/"><img id="img" src="imagens/projeto1.png" alt="Foto projeto 1"></a>
-                </div>
-
-                <div class="card-text">
-                    <span class="title">Justifiq.</span>
-                    <span class="description">HTML - CSS</span>
-                </div>
-
-                <div class="media-buttons">
-                    <a href="https://github.com/Programa-Duda/Justifiq." class="git-link"><img src="imagens/github.png"></a>
-                    <a target="_blank" href="https://justifiq.vercel.app/" class="link"><img src="imagens/eye.png"></a>
-                </div>
-
-            </div>
-
-           
-        
-
-        <!-- Botão "ver mais" projetos -->
-        </div>
-        <a target="_blank" href="https://github.com/Programa-Duda">
-            <button class="bt-ver-mais"> VER MAIS </button>
-        </a>
-
-     </section>
-
-
-    <!-- Desenvolvendo do rodapé -->
-    <!-- INÍCIO RODAPÉ -->
-     <section id="contato">
-     <footer class="rodape">
-
-        <a target="_blank" href="https://wa.me/5519991881910"><img src="imagens/whats logo.png" alt="Logo WhatsApp"></a>
-        <a target="_blank" href="https://github.com/Programa-Duda"><img src="imagens/github.png" alt="Logo Github"></a>
-        <a target="_blank" href="mailto:dudapereira.dev@gmail.com"><img src="imagens/envelope.png" alt="Logo Email"></a>
-        <a target="_blank" href="https://www.linkedin.com/in/maria-eduarda-pereira-a6b005344/"><img src="imagens/linkedin logo.png" alt="Logo Linkedin"></a>
-        <a target="_blank" href="https://www.instagram.com/mariaed.exe/"><img src="imagens/instagram logo.png" alt="Logo Instagram"></a>
-
-     </footer>
-     </section>
-
-
-     
-    <!-- JAVA SCRIPT LINK -->
+    <!-- JAVASCRIPT LINK -->
     <script src="script.js"></script>
 
 </body>
