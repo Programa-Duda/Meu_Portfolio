@@ -59,9 +59,30 @@ if (reducedMotion) {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.12 });
+}, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -60px 0px'
+});
 
     document.querySelectorAll('.reveal').forEach((element) => {
         observer.observe(element);
     });
 }
+
+
+/* ==== NÍVEL DAS SKILLS ==== */
+
+const skills = document.querySelectorAll('.skill');
+
+skills.forEach((skill) => {
+    const progress = skill.querySelector('.skill-progress');
+    const percent = skill.dataset.percent;
+
+    skill.addEventListener('mouseenter', () => {
+        progress.style.width = `${percent}%`;
+    });
+
+    skill.addEventListener('mouseleave', () => {
+        progress.style.width = '0%';
+    });
+});

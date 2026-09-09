@@ -424,6 +424,7 @@ em,
 
 .skills-area {
     grid-area: skills;
+    width: 100%;
     display: flex;
     gap: clamp(26px, 8vw, 90px);
 }
@@ -439,18 +440,182 @@ em,
 }
 
 .skills-list {
-    max-width: 330px;
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
     list-style: none;
 }
 
-.skills-list li {
-    padding: 6px 10px;
+
+/* ==== SKILLS COM HOVER ==== */
+
+.skills-list li.skill {
+    padding: 7px 11px;
     border: 1px solid var(--cor-linha);
     border-radius: 3px;
     font-size: 0.76rem;
+
+    position: relative;
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* Efeito quando passa o mouse na skill */
+.skills-list li.skill:hover {
+    color: var(--cor-texto);
+    background-color: rgba(255, 87, 34, 0.12);
+    border-color: var(--cor-destaque);
+    transform: translateY(-2px);
+}
+
+
+/* ==== CAIXINHA DO NÍVEL ==== */
+
+.skill-tooltip {
+    width: 190px;
+    padding: 15px;
+
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-destaque);
+    border-radius: 8px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35);
+
+    position: absolute;
+
+    left: 50%;
+    bottom: calc(100% + 12px);
+
+    transform: translateX(-50%) translateY(8px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    z-index: 20;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+/* Pequena setinha da tooltip */
+.skill-tooltip::after {
+    width: 10px;
+    height: 10px;
+
+    background-color: var(--cor-fundo);
+    border-right: 1px solid var(--cor-destaque);
+    border-bottom: 1px solid var(--cor-destaque);
+
+    content: '';
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -6px;
+
+    transform: translateX(-50%) rotate(45deg);
+}
+
+
+/* Nome da tecnologia */
+.skill-tooltip strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--cor-texto);
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+}
+
+
+/* Nível */
+.skill-tooltip > span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--cor-destaque);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+
+/* ==== BARRA DE PROGRESSO ==== */
+
+.skill-bar {
+    width: 100%;
+    height: 5px;
+
+    overflow: hidden;
+
+    background-color: rgba(245, 245, 245, 0.12);
+    border-radius: 10px;
+}
+
+
+.skill-progress {
+    width: 0;
+    height: 100%;
+
+    background-color: var(--cor-destaque);
+    border-radius: inherit;
+
+    transition: width 0.5s ease;
+}
+
+
+/* Mostra a tooltip SOMENTE quando
+   o mouse está naquela skill */
+.skills-list li.skill:hover .skill-tooltip,
+.skills-list li.skill:focus-within .skill-tooltip {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateX(-50%) translateY(0);
+}
+
+
+/* ============================= */
+/* RESPONSIVIDADE DAS TOOLTIPS */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    .skill-tooltip {
+        width: 170px;
+
+        left: 0;
+        bottom: calc(100% + 10px);
+
+        transform: translateY(8px);
+    }
+
+    .skills-list li.skill:hover .skill-tooltip,
+    .skills-list li.skill:focus-within .skill-tooltip {
+        transform: translateY(0);
+    }
+
+    .skill-tooltip::after {
+        left: 25px;
+        transform: rotate(45deg);
+    }
 }
 
 /* ====================== */
@@ -476,118 +641,231 @@ em,
     font-size: 0.92rem;
 }
 
+
+/* =========================================
+   CARDS DE PROJETOS
+   ========================================= */
+
 .lista-projetos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 28px;
 }
+
+
+/* CARD */
 
 .card {
     min-width: 0;
-    padding-top: 14px;
-    border-top: 1px solid var(--cor-linha);
+    padding: 14px;
+    background-color: var(--cor-fundo);
+    border: 1px solid rgba(245, 245, 245, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    filter: brightness(0.85);
+    cursor: default;
+    transition:
+        transform 5s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
 }
+
+
+/* Elevação suave do card */
+
+.card.reveal.visible:not(.card-coming-soon):hover {
+    transform: scale(1.025) translateY(-5px);
+    border-color: rgba(255, 87, 34, 0.4);
+    filter: brightness(1);
+    box-shadow: 
+        0 20px 45px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================
+   IMAGEM PROJETOS
+   ========================================= */
 
 .project-image {
     height: clamp(215px, 23vw, 320px);
-    background-color: var(--cor-superficie);
+    background-color: var(--cor-fundo);
     display: block;
     overflow: hidden;
     position: relative;
+    border-radius: 14px;
 }
+
+
+/* Imagem */
 
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease, filter 0.5s ease;
+    transition: filter 0.55s ease;
 }
 
-.project-image span {
-    padding: 8px 12px;
-    background-color: var(--cor-destaque);
-    color: var(--cor-texto);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    opacity: 0;
+
+/* Clareia a imagem no hover do card */
+.card:not(.card-coming-soon):hover .project-image img {
+    filter: brightness(1);
+}
+
+
+/* =========================================
+   BOTÕES SOBRE A IMAGEM - PROJETOS
+   ========================================= */
+
+.project-actions {
+    display: flex;
+    gap: 8px;
     position: absolute;
-    bottom: 18px;
     left: 18px;
-    transform: translateY(8px);
-    transition: 0.3s;
+    bottom: 18px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+        opacity 5s ease, 
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.project-image:hover img {
-    filter: brightness(0.7);
-    transform: scale(1.05);
-}
 
-.project-image:hover span {
+/* Mostrar os botões */
+
+.card:hover .project-actions {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
 }
 
-.project-placeholder img {
-    filter: brightness(0.55) grayscale(0.65);
+
+/* Botões */
+
+.project-button {
+    padding: 9px 13px;
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
-.project-placeholder:hover img {
-    transform: none;
+
+/* Ver projeto */
+
+.project-button-primary {
+    background-color: var(--cor-destaque);
+    border: 1px solid var(--cor-destaque);
+    color: var(--cor-texto);
 }
 
-.project-placeholder span {
-    background-color: var(--cor-superficie);
-    opacity: 1;
-    transform: none;
+
+/* Ver código */
+
+.project-button-code {
+    background-color: rgba(48, 56, 65, 0.92);
+    border: 1px solid rgba(245, 245, 245, 0.20);
+    color: var(--cor-texto);
 }
+
+
+.project-button-primary:hover {
+    background-color: #ff6b3d;
+    border-color: #ff6b3d;
+}
+
+
+.project-button-code:hover {
+    background-color: #4a535d;
+    border-color: #68727c;
+}
+
+
+/* =========================================
+   TEXTO DO CARD - PROJETOS
+   ========================================= */
 
 .card-text {
-    padding: 18px 0;
+    padding: 20px 4px 8px;
 }
+
 
 .project-number {
+    margin-bottom: 5px;
     color: var(--cor-destaque);
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 700;
+    letter-spacing: 0.08em;
 }
+
 
 .card h3 {
-    margin: 5px 0 7px;
-    font-size: 1.5rem;
+    margin: 4px 0 7px;
+    font-size: 1.45rem;
+    letter-spacing: -0.03em;
 }
 
-.card-text > p:last-child {
+
+.card-text p {
     color: var(--cor-texto-suave);
     font-size: 0.86rem;
 }
 
-.project-links {
-    padding-top: 13px;
-    border-top: 1px solid var(--cor-linha);
+/* =========================================
+   TECNOLOGIAS DOS PROJETOS
+   ========================================= */
+
+.project-tech {
     display: flex;
-    gap: 18px;
-    font-size: 0.75rem;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 16px;
+}
+
+
+/* Cada tecnologia */
+
+.project-tech span {
+    padding: 5px 9px;
+    background-color: rgba(245, 245, 245, 0.06);
+    border: 1px solid rgba(245, 245, 245, 0.10);
+    border-radius: 4px;
+    color: var(--cor-texto-suave);
+    font-size: 0.62rem;
     font-weight: 700;
     letter-spacing: 0.06em;
-    text-transform: uppercase;
+
 }
 
-.project-links a:hover {
-    color: var(--cor-destaque);
+
+/* Hover individual da tecnologia */
+
+.project-tech span:hover {
+    background-color: rgba(214, 214, 214, 0.12);
+    border-color: rgba(214, 214, 214, 0.12);
+    color: var(--cor-texto);
+    cursor: default;
 }
 
-.project-links.muted {
-    color: var(--cor-texto-suave);
-    font-weight: 400;
-    letter-spacing: 0;
-    text-transform: none;
+/* =========================================
+   CARDS EM BREVE - PROJETOS
+   ========================================= */
+
+.card-coming-soon:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(190, 190, 190, 0.4);
 }
 
-.all-projects {
-    width: max-content;
-    margin: 56px auto 0;
+.card-coming-soon:hover .project-image img {
+    filter: none;
+}
+
+.project-button-coming-soon {
+    display: inline-block;
+    background-color: #59636d;
+    border: 1px solid #59636d;
+    color: var(--cor-texto);
+    cursor: default;
 }
 
 /* ====================== */
@@ -648,9 +926,13 @@ em,
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.reveal.visible {
+.card.reveal.visible {
     opacity: 1;
     transform: none;
+}
+
+.card.reveal.visible:hover {
+    transform: scale(1.02) translateY(-4px);
 }
 
 @keyframes girar {
@@ -659,12 +941,11 @@ em,
     }
 }
 
-/* ====================== */
-
-
+/* ======================== */
 /* ==== RESPONSIVIDADE ==== */
+/* ======================== */
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .main {
         padding-top: 140px;
         grid-template-columns: 1fr;
@@ -702,7 +983,7 @@ em,
     }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 750px) {
     .nav {
         height: 68px;
         padding: 0 24px;
