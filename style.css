@@ -926,6 +926,11 @@ em,
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .card.reveal.visible {
     opacity: 1;
     transform: none;
