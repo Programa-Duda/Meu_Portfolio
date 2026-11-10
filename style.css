@@ -18,6 +18,8 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    width: 100%;
+    overflow-x: clip;
 }
 
 body {
@@ -25,7 +27,8 @@ body {
     color: var(--cor-texto);
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    overflow-x: hidden;
+    width: 100%;
+    overflow-x: clip;
 }
 
 a {
